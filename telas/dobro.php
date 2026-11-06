@@ -20,7 +20,7 @@
         <input type="number" id="primeiroNumero" name="primeiroNumero"/>
         <br><br>
         
-        <button type="submit">Dobro
+        <button type="submit">Calcular Dobro
         <?php
             if(isset($_POST['primeiroNumero'])){
                 $num1 = $_POST ['primeiroNumero'];

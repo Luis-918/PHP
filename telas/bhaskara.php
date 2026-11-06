@@ -28,21 +28,21 @@
         <input type="number" id="terceiroNumero" name="terceiroNumero"/>
         <br><br>
         
-        <button type="submit">Calcular
+        <button type="submit">Calcular Bhaskara
         <?php
-            if(isset($_POST['primeiroNumero'])){
-                $a = $_POST ['primeiroNumero'];
-                $b = $_POST ['segundoNumero'];
-                $c = $_POST ['terceiroNumero'];
+            if (isset($_POST['primeiroNumero'])) {
+                $a = $_POST['primeiroNumero'];
+                $b = $_POST['segundoNumero'];
+                $c = $_POST['terceiroNumero'];
             }
 
-            $resultado = $funcoes-> calcularX1X2 ($a,$b,$c);//Utilizando o método da classe Funcoes
+            $resultado = $funcoes-> calcularX1X2 ($a, $b, $c);//Utilizando o método da classe Funcoes
         ?>
         </button>
     </form>
     <?php
-        if(isset($_POST['primeiroNumero'])){
-            echo "O resultado da soma é: ".$resultado;
+        if (isset($_POST['primeiroNumero'])){
+            echo "O resultado é: <br>" . $resultado;
         }else{
             echo "Preencha os campos";
         }
