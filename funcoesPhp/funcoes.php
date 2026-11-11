@@ -16,8 +16,10 @@
         private float $comprimento, $largura;
         private float $produtoOriginal;
         private float $distancia, $tempo;
-        private float $hora, $horas;
-
+        private float $valorhora, $horastrabalhadas;
+        private float $idade;
+        private float $baseMaior, $baseMenor;
+        private float $dias;
 
         //Criando um construtor = instância as variáveis -> Cria as variáveis na memória do servidor
         public function __construct(){
@@ -172,6 +174,107 @@
             return $idade * 365;
         }//fim do método Idade para Dias
 
+        public function anosRestantes(int $anos) {
+            return 100 - $anos;
+        }//fim do método Anos Restantes
+
+        public function somaMedia(float $num1, float $num2, float $num3) {
+            $soma = $num1 + $num2 + $num3;
+            $media = $soma / 3;
+
+            return [
+                'soma' => $soma,
+                'média' => $media
+            ];
+        }//fim do método Soma e Média
+
+
+
+        //For
+        public function tabuada(float $num1){
+            $msg = "";
+            for ($i = 0; $i<= 10;$i++){
+                $msg .= "<br>$num1 * $i = ".($num1 * $i);
+            }//fim do for
+            return $msg;
+        }//fim do método
+
+        //While
+        public function decimalBinario(float $decimal){
+            $resultado = "";
+            while($decimal / 2 != 0){
+                $resultado .= " ".($decimal % 2);//Coletando o resto da divisão
+                $decimal = (int)$decimal/2;//Contribuir para o critério de parada
+            }//fim do while
+            return strrev($resultado);//Mostrando da Direita para Esquerda
+        }//fim do método Decimal Binário
+
+        public function decimalHexadecimal (float $decimal){
+            $valor = 0;
+            $resultado = "";
+            while($decimal / 16 != 0){
+                $resto = $decimal % 16;
+                
+                switch($resto){
+                    case 10:
+                        $resultado .= "A";
+                        break;
+
+                    case 11:
+                        $resultado .= "B";
+                        break;
+
+                    case 12:
+                        $resultado .= "C";
+                        break;
+
+                    case 13:
+                        $resultado .= "D";
+                        break;
+
+                    case 14:
+                        $resultado .= "E";
+                        break;
+
+                    case 15:
+                        $resultado .= "F";
+                        break;
+                    default:
+                        $resultado .= $resto;
+                }//fim do Switch
+                $decimal = (int)$decimal/16;
+            }//fim do while
+            return strrev($resultado);//Mostrando da Direita para Esquerda
+        }//fim do método Decimal Hexadecimal
+
+        //Do While
+        public function senha (float $senha){
+            $senhaBD = 1234;
+            do{
+                if ($senha != $senhaBD){
+                    $msg = "Erro, digite novamente!";
+                }else{
+                    $msg = "Bem-vindo!";
+                }
+            }while($senhaBD != $senha);
+            return $msg;
+        }//fim do método Senha
+
+
+
+        //Exercícios Continuação
+        public function trapezio(float $baseMaior, float $baseMenor, float $altura){
+            $area = (($baseMaior + $baseMenor) * $altura) / 2;
+            return $area;
+        }//fim do método Trapézio
+
+        public function diasSegundos(int $dias){
+            return $dias * 86400;
+        }//fim do método Dias para Segundos
+
+        public function somaDigitos(int $num1) {
+            return $dias * 86400;
+        }//fim do método dias para segundos
 
     }//fim da Classe
 ?>
