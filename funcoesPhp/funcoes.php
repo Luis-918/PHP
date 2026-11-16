@@ -188,6 +188,34 @@
             ];
         }//fim do método Soma e Média
 
+        //Exercícios Continuação
+        public function trapezio(float $baseMaior, float $baseMenor, float $altura){
+            $area = (($baseMaior + $baseMenor) * $altura) / 2;
+            return $area;
+        }//fim do método Trapézio
+
+        public function diasSegundos(int $dias){
+            return $dias * 86400;
+        }//fim do método Dias para Segundos
+
+        public function somaDigitos(int $num): int {
+            $dezena = intdiv($num, 10);
+            $unidade = $num % 10;
+            
+            $soma = $dezena + $unidade;
+            return $soma;
+        }//fim do método Soma de Digitos
+
+        public function inversoMultiplicativo(float $num): float {
+            if ($num == 0) {
+                throw new InvalidArgumentException("Não existe inverso multiplicativo para zero.");
+            }//fim do if
+            
+            $inverso = 1 / $num;
+            return $inverso;
+        }//fim do método Inverso Multiplicativo
+
+
 
 
         //For
@@ -260,21 +288,69 @@
             return $msg;
         }//fim do método Senha
 
+        //Exercícios com FOR
+        public function crescente(int $num1): string{
+            if ($num1 <= 0) {
+                return "Por favor, informe um número inteiro positivo.";
+            }//fim do if
 
+            $sequencia = "";
 
-        //Exercícios Continuação
-        public function trapezio(float $baseMaior, float $baseMenor, float $altura){
-            $area = (($baseMaior + $baseMenor) * $altura) / 2;
-            return $area;
-        }//fim do método Trapézio
+            for ($i = 1; $i <= $num1; $i++){
+                $sequencia .= $i . " ";
+            }//fim do for
 
-        public function diasSegundos(int $dias){
-            return $dias * 86400;
-        }//fim do método Dias para Segundos
+            return $sequencia;
+        }//fim do método Ordem Crescente
 
-        public function somaDigitos(int $num1) {
-            return $dias * 86400;
-        }//fim do método dias para segundos
+        public function regressiva(int $num1): string{
+            if ($num1 <= 0){
+                return "Por favor, informe um número inteiro positivo.";
+            }//fim do if
+
+            $sequencia = "";
+
+            for ($i = $num1; $i >= 1; $i--){
+                $sequencia .= $i . " ";
+            }//fim do for
+
+            return $sequencia;
+        }//fim do método Ordem Regressiva
+
+        public function somarInteiros(int $num1): int|string{
+            if ($num1 <= 0) {
+                return "Por favor, informe um número inteiro positivo.";
+            }//fim do if
+
+            $soma = 0;
+
+            for ($i = 1; $i <= $num1; $i++){
+                $soma += $i;
+            }//fim do for
+
+            return $soma;
+        }//fim do método Somar Inteiros
+
+        public function multiplos(): string{
+            $sequencia = "";
+
+            for ($i = 1; $i <= 100; $i++) {
+                
+                if ($i % 7 == 0) {
+                    $sequencia .= $i . " ";
+                }//fim do if
+            }//fim do for
+
+            return $sequencia;
+        }// fim do método Múltiplos de 7
+
+        public function pares(): string{
+            for ($i = 1; $i <= 20; $i++) {
+                if ($i % 7 == 0) {
+                    $sequencia .= $i . " ";
+                }//fim do if
+            }//fim do for
+        }//fim do método Pares entre 20 Números
 
     }//fim da Classe
 ?>

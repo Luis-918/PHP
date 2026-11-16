@@ -16,23 +16,23 @@
 <body>
     <h1>Informe os valores abaixo: </h1>
     <form method="POST">
-        <label>Informe um número: </label>
+        <label>Informe o número: </label>
         <input type="number" id="primeiroNumero" name="primeiroNumero"/>
         <br><br>
         
         <button type="submit">Calcular os dígitos
         <?php
             if(isset($_POST['primeiroNumero'])){
-                $num1 = $_POST ['primeiroNumero'];
+                $num = $_POST ['primeiroNumero'];
             }
 
-            $resultado = $funcoes-> SomaDigitos($num1);//Utilizando o método da classe Funcoes
+            $resultado = $funcoes-> SomaDigitos($num);//Utilizando o método da classe Funcoes
         ?>
         </button>
     </form>
     <?php
         if (isset($_POST['primeiroNumero'])){
-            echo "O resultado é: " . $resultado;
+            echo "A soma dos digitos é: " . $resultado;
         }else{
             echo "Preencha os campos";
         }
