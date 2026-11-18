@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Múltiplos de 7</title>
+    <title>Pares entre 20 números</title>
 </head>
 <body>
     <h1>Informe os valores abaixo: </h1>
@@ -20,7 +20,7 @@
         <input type="number" id="primeiroNumero" name="primeiroNumero"/>
         <br><br>
         
-        <button type="submit">Mostrar os múltiplos de 7
+        <button type="submit">Mostrar os Pares de 20
         <?php
             if(isset($_POST['primeiroNumero'])){
                 $num1 = $_POST ['primeiroNumero'];
@@ -32,7 +32,7 @@
     </form>
     <?php
         if (isset($_POST['primeiroNumero'])){
-            echo "Os múltiplos de 7 entre 1 a 100 são: " . $resultado;
+            echo "Os Pares entre 20 números: " . $resultado;
         }else{
             echo "Preencha os campos";
         }
