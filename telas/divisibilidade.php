@@ -11,33 +11,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divisibilidade por 3
-</title>
+    <title>Divisibilidade por 3</title>
 </head>
 <body>
-    <h1>Informe os valores abaixo: </h1>
+    <h1>Informe 30 números inteiros: </h1>
     <form method="POST">
-        <label>Informe o número: </label>
-        <input type="number" id="primeiroNumero" name="primeiroNumero"/>
-        <br><br>
-        
-        <button type="submit">Mostrar a soma do expoentes
-        <?php
-            if(isset($_POST['primeiroNumero'])){
-                $numero = $_POST ['primeiroNumero'];
-            }
+        <?php for ($i = 1; $i <= 30; $i++): ?>
+            <label for="num_<?= $i ?>"><?= $i ?>º número:</label>
+            <input type="number" id="num_<?= $i ?>" name="numeros[]" required>
+            <br><br>
+        <?php endfor; ?>
 
-            $resultado = $funcoes-> Divisibilidade($numero);//Utilizando o método da classe Funcoes
-        ?>
+        <button type="submit">Verificar divisibilidade por 3
         </button>
     </form>
-    <?php
-        if (isset($_POST['primeiroNumero'])){
-            echo $resultado;
-        }else{
-            echo "Preencha os campos";
-        }
-    ?>
+    <?php if ($resultado !== ""): ?>
+        <?= $resultado ?>
+    <?php else: ?>
+        <p>Preencha os 30 campos e clique no botão.</p>
+    <?php endif; ?>
 
 </body>
 </html>

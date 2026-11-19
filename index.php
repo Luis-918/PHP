@@ -103,26 +103,26 @@
     <!--Exercícios com WHILE-->
     <h2>Exercícios com WHILE</h2><br><br>
     <button><a href="telas/senha.php"> Verificação de Senhas</a></button><br><!--Exercício 13-->
-    <button><a href="#"> #</a></button><br><!--Exercício 14-->
-    <button><a href="#"> #</a></button><br><!--Exercício 15-->
-    <button><a href="#"> #</a></button><br><!--Exercício 16-->
-    <button><a href="#"> #</a></button><br><!--Exercício 17-->
-    <button><a href="#"> #</a></button><br><!--Exercício 18-->
-    <button><a href="#"> #</a></button><br><!--Exercício 19-->
-    <button><a href="#"> #</a></button><br><!--Exercício 20-->
-    <button><a href="#"> #</a></button><br><!--Exercício 21-->
-    <button><a href="#"> #</a></button><br><!--Exercício 22-->
+    <button><a href="telas/acumulador.php"> Acumulador de Valores</a></button><br><!--Exercício 14-->
+    <button><a href="telas/validaridade.php"> Validação de Idade</a></button><br><!--Exercício 15-->
+    <button><a href="#"> Contagem de Números Positivos</a></button><br><!--Exercício 16-->
+    <button><a href="#"> Divisão Sucessiva</a></button><br><!--Exercício 17-->
+    <button><a href="#"> Crescimento de Investimento</a></button><br><!--Exercício 18-->
+    <button><a href="#"> Localização de um Número</a></button><br><!--Exercício 19-->
+    <button><a href="#"> Soma dos Dígitos</a></button><br><!--Exercício 20-->
+    <button><a href="#"> Adivinhe o Número</a></button><br><!--Exercício 21-->
+    <button><a href="#"> Contagem Regressiva por Intervalo</a></button><br><!--Exercício 22-->
 
     <!--Exercícios com DO WHILE-->
     <h2>Exercícios com DO WHILE</h2><br><br>
-    <button><a href="#"> #</a></button><br><!--Exercício 23-->
-    <button><a href="#"> #</a></button><br><!--Exercício 24-->
-    <button><a href="#"> #</a></button><br><!--Exercício 25-->
-    <button><a href="#"> #</a></button><br><!--Exercício 26-->
-    <button><a href="#"> #</a></button><br><!--Exercício 27-->
-    <button><a href="#"> #</a></button><br><!--Exercício 28-->
-    <button><a href="#"> #</a></button><br><!--Exercício 29-->
-    <button><a href="#"> #</a></button><br><!--Exercício 30-->
+    <button><a href="#"> Menu de operações matemáticas</a></button><br><!--Exercício 23-->
+    <button><a href="#"> Cadastro de produtos</a></button><br><!--Exercício 24-->
+    <button><a href="#"> Calculadora de média</a></button><br><!--Exercício 25-->
+    <button><a href="#"> Caixa eletrônico</a></button><br><!--Exercício 26-->
+    <button><a href="#"> Pesquisa de satisfação</a></button><br><!--Exercício 27-->
+    <button><a href="#"> Calculadora de descontos</a></button><br><!--Exercício 28-->
+    <button><a href="#"> Controle de acesso</a></button><br><!--Exercício 29-->
+    <button><a href="#"> Conversor de moedas</a></button><br><!--Exercício 30-->
 
 </body>
 </html>

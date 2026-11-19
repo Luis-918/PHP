@@ -216,6 +216,65 @@
         }//fim do método Inverso Multiplicativo
 
 
+        //Exercícios Condicionais
+        public function verificarNumero(int $num1){
+            if ($num1 > 0){
+                return "Positivo.";
+            }else if ($num1 < 0){
+                return "Negativo.";
+            }else{
+                return "Zero.";
+            }//fim do if
+        }//fim do método Verificar os Números
+
+        public function verificarMaiorNumero(int $num1, int $num2){
+            if ($num1 > $num2){
+                return $num1;
+            }else if ($num2 > $num1){
+                return $num2;
+            }else{
+                return "Os números são iguais.";
+            }//fim do if
+        }//fim do método Verificar o Maior Número
+
+
+        public function verificarMaiorMenor(int $num1, int $num2, int $num3){
+
+            $maior = $num1;
+            $menor = $num1;
+
+            if ($num2 > $maior){
+                $maior = $num2;
+            }//fim do if
+
+            if ($num3 > $maior){
+                $maior = $num3;
+            }//fim do if
+
+            if ($num2 < $menor){
+                $menor = $num2;
+            }//fim do if
+
+            if ($num3 < $menor){
+                $menor = $num3;
+            }//fim do if
+
+            return "O maior número é: " . $maior .
+                "<br>O menor número é: " . $menor;
+
+        }//fim do método Verificar o Maior e Menor Número
+
+        public function verificarAnoBissexto(int $ano){
+
+            if (($ano % 400 == 0) || (($ano % 4 == 0) && ($ano % 100 != 0))){
+                return "O ano " . $ano . " é bissexto.";
+            }else{
+                return "O ano " . $ano . " não é bissexto.";
+            }
+
+        }//fim do método Verificar Ano Bissexto
+
+
 
         //For
         public function tabuada(float $num1){
@@ -447,24 +506,70 @@
             return "A soma dos quadrados de 1 até $numero é: $soma";
         }//fim do método Soma de Quadrados
 
-        public function divisibilidade() {
+        public function divisibilidade(array $numeros): string{
             $divisiveisPor3 = 0;
             $naoDivisiveisPor3 = 0;
 
-            for ($i = 1; $i <= 30; $i++){
-                $numero = (int) readline("Digite o {$i}º número inteiro: ");
+            for ($i = 0; $i < count($numeros); $i++) {
+                $numero = (int) $numeros[$i];
 
-                if ($numero % 3 === 0) {
+                if ($numero % 3 === 0){
                     $divisiveisPor3++;
                 }else{
                     $naoDivisiveisPor3++;
                 }//fim do if
             }//fim do for
 
-            echo "--- Resultado ---\n";
-            echo "Números divisíveis por 3: {$divisiveisPor3}\n";
-            echo "Números não divisíveis por 3: {$naoDivisiveisPor3}\n";
+            return "<p><strong>Resultado:</strong></p>"
+                . "<p>Números divisíveis por 3: {$divisiveisPor3}</p>"
+                . "<p>Números não divisíveis por 3: {$naoDivisiveisPor3}</p>";
         }//fim do método Divisibilidade por 3
+
+
+        //Exercícios com WHILE
+        public function verificarSenha(float $senha){
+            $senhaBD = 1234;
+            $msg = "Bem-vindo!";
+
+            while ($senhaBD != $senha) {
+                $msg = "Erro, digite novamente!";
+            }//fim do while
+
+            return $msg;
+        }//fim do método Verificar Senha
+        
+        public function acumuladorValores(int $numero, int $somaAtual = 0): array{
+            $soma = $somaAtual;
+
+            while ($soma <= 200){
+                $soma += $numero;
+                break;
+            }//fim do while
+
+            $atingiuLimite = $soma > 200;
+
+            return [
+                'soma' => $soma,
+                'atingiuLimite' => $atingiuLimite,
+                'mensagem' => $atingiuLimite
+                ? "Limite ultrapassado! Soma final: {$soma}"
+                : "Soma atual: {$soma} (continue informando números)"
+            ];
+        }//fim do método Acumulador de Valores
+
+        public function validarIdades($idade){
+
+        $idade = -1;
+
+        while ($idade < 0 || $idade > 120){
+            $idade = (int) readline("Digite sua idade: ");
+
+            if ($idade < 0 || $idade > 120){
+                echo "Idade inválida! Digite uma idade entre 0 e 120.\n";
+            }//fim do if
+        }//fim do while
+
+        }//fim do método Validação de Idades
 
     }//fim da classe
 ?>
